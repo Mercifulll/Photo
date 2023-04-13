@@ -37,13 +37,16 @@ namespace WinFormsApp1
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.label3 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
+            this.radioButton1.Checked = true;
             this.radioButton1.Location = new System.Drawing.Point(36, 50);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(60, 24);
@@ -81,10 +84,11 @@ namespace WinFormsApp1
             // 
             this.button1.Location = new System.Drawing.Point(36, 200);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 29);
+            this.button1.Size = new System.Drawing.Size(159, 29);
             this.button1.TabIndex = 3;
             this.button1.Text = "OK";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -104,28 +108,39 @@ namespace WinFormsApp1
             this.label2.TabIndex = 5;
             this.label2.Text = "Розмір";
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(130, 152);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(92, 27);
-            this.textBox1.TabIndex = 6;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.panel1.Location = new System.Drawing.Point(36, 255);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(250, 96);
+            this.panel1.Size = new System.Drawing.Size(90, 120);
             this.panel1.TabIndex = 7;
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(127, 153);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(68, 27);
+            this.numericUpDown1.TabIndex = 8;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(240, 155);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(50, 20);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "0 грн.";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(630, 397);
+            this.ClientSize = new System.Drawing.Size(427, 535);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
@@ -134,30 +149,14 @@ namespace WinFormsApp1
             this.Controls.Add(this.radioButton1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void radioButton3_CheckedChanged(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
+       
 
         #endregion
 
@@ -167,8 +166,9 @@ namespace WinFormsApp1
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Label label3;
     }
 }
 
