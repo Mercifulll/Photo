@@ -16,6 +16,21 @@ namespace WinFormsApp1
         {
             InitializeComponent();
         }
+        private void RadioButton1(object sender, EventArgs e)
+        {
 
+        }
+        private void RadioButton2(object sender, EventArgs e)
+        {
+
+        }
+        private void RadioButton3(object sender, EventArgs e)
+        {
+
+        }
+        private void TextBox1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
